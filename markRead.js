@@ -13,4 +13,13 @@ mark.addEventListener('click',(botao)=>{
      amount.innerHTML = '0'
 })
 
+const observador = new IntersectionObserver(elemento=>{
+   Array.from(elemento).forEach((visible)=>{
+       visible.target.classList.add('show')
+   })
 
+   })
+
+   Array.from(document.querySelectorAll('.comentContainer')).forEach((element)=>{
+       observador.observe(element)
+   })

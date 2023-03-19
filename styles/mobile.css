@@ -82,7 +82,9 @@ button:hover{
     gap: 15px;
     margin-bottom: 15px;
     border-radius: 10px;
-    animation: show 1s ease forwards;
+    opacity: 0;
+    transform: translate(-4px, -4px);
+    
 }
 
 @keyframes show {
@@ -179,5 +181,12 @@ a:hover{
 }
 
 .attribution{
+    background-color: transparent;
     text-align: center;
+}
+
+.show{
+    opacity: 1;
+    transition: all 2s;
+    transform: translate(0px, 0px);
 }
